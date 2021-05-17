@@ -1,0 +1,57 @@
+.fulmini{
+    background-image: url('../assets/fulmini.svg');
+}
+.pioggerella{
+    background-image: url('../assets/pioggia.svg');
+}
+.pioggia{
+    background-image: url('../assets/pioggia.svg');
+}
+.neve{
+    background-image: url('../assets/neve.svg');
+}
+.nebbia{
+    background-image: url('../assets/nebbia.svg');
+}
+.sole{
+    background-image: url('../assets/sole.svg');
+}
+.coperto{
+    background-image: url('../assets/coperto.svg');
+}
+.nuvoloso{
+    background-image: url('../assets/nuvoloso.svg');
+}
+.precipitazioni{
+    background-image: url('../assets/coperto.svg');
+}
+
+.card{
+    background: #00000000 !important;
+    border: none !important;
+    flex: auto !important;
+}
+.card-footer {
+    background-color: rgba(0, 0, 0, 0) !important; 
+     border-top: none !important;
+}
+
+.icon-tempo{
+    height: 4em;
+    width: 4em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.big-icon{
+    height: 7em;
+    width: 7em;
+}
+    
+.bgblur{
+    background-image: url('../assets/bgblur.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

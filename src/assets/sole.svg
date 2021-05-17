@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
+    <title>6DE5EB89-C6D0-4F3E-99B2-A6B75135E519</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Exercise" transform="translate(-606.000000, -477.000000)">
+            <g id="artwork" transform="translate(16.000000, 24.000000)">
+                <g id="Stacked-Group" transform="translate(19.000000, 405.000000)">
+                    <g id="Wheater/Day" transform="translate(563.000000, 12.000000)">
+                        <g id="Sun" transform="translate(1.000000, 35.000000)">
+                            <rect id="Rectangle" x="0" y="0" width="54" height="42"></rect>
+                            <g id="Oval-23-+-Group" transform="translate(7.000000, 1.909091)">
+                                <ellipse id="Oval-23" fill="#FFFFFF" cx="19.90625" cy="19.0068822" rx="12.25" ry="11.6965429"></ellipse>
+                                <g id="Group" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2">
+                                    <path d="M19.90625,0.365516965 L19.90625,4.75172055" id="Line"></path>
+                                    <path d="M19.90625,33.2620439 L19.90625,37.6482474" id="Line-4"></path>
+                                    <g id="Line-9-+-Line-5" transform="translate(19.906250, 19.006882) rotate(-270.000000) translate(-19.906250, -19.006882) translate(19.140625, 0.000000)">
+                                        <path d="M0.765625,0.365516965 L0.765625,4.75172055" id="Line-9"></path>
+                                        <path d="M0.765625,33.2620439 L0.765625,37.6482474" id="Line-5"></path>
+                                    </g>
+                                    <g id="Line-9-+-Line-6" transform="translate(19.906250, 19.006882) rotate(-225.000000) translate(-19.906250, -19.006882) translate(19.140625, 0.000000)">
+                                        <path d="M0.765625,0.365516965 L0.765625,4.75172055" id="Line-9"></path>
+                                        <path d="M0.765625,33.2620439 L0.765625,37.6482474" id="Line-5"></path>
+                                    </g>
+                                    <g id="Line-9-+-Line-7" transform="translate(19.906250, 19.006882) rotate(-135.000000) translate(-19.906250, -19.006882) translate(19.140625, 0.000000)">
+                                        <path d="M0.765625,0.365516965 L0.765625,4.75172055" id="Line-9"></path>
+                                        <path d="M0.765625,33.2620439 L0.765625,37.6482474" id="Line-5"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

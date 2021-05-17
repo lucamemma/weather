@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from "react";
+import Weather from './components/weather';
+import { Spinner } from 'react-bootstrap';
 
 function App() {
+
+  const [data, setData] = useState(null);
+  const city = 'Rome';
+  const state = 'Italy';
+  const APIKEY = "edad788f999748dd986f2d4b76c75522";
+
+
+  useEffect(()=> {
+    console.log('ENV',process.env);
+      const fetchData = async () => {
+          let root = "https://api.weatherbit.io/v2.0/forecast/daily";
+          let api_call = `${root}?city=${city}&country=${state}&key=${APIKEY}&lang=it&days=8`
+          await fetch(api_call)
+          .then(res => res.json())
+          .then(result => {
+            setData(result)
+            console.log('RESULT',result);
+          });
+      };
+      if(!data){
+        fetchData();
+      }
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {(data ) ? (
+        <Weather weatherData={data} />
+      ): (
+        <Spinner animation="grow" className={'verycenter'} variant="light" />
+      )}
     </div>
   );
 }
