@@ -7,11 +7,13 @@ import Day from './day';
 const Weather = ({weatherData}) => (
 
     <Container className="bgblur">
-        <Row>
-          <Day dayData={weatherData.data[0]} header={true}  city={weatherData.city_name}/>
+        <Row className={"justified"}>
+          <Col lg={12} md={12} sm={12} xs={12}>
+            <Day dayData={weatherData.data[0]} header={true}  city={weatherData.city_name}/>
+          </Col>
         </Row>
         <hr />
-        <Row>
+        <Row className={"justified"}>
           <CardDeck>
         {weatherData.data.slice(1, weatherData.data.length).map((day, i) => {     
            console.log(i,day);                 

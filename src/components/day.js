@@ -35,6 +35,18 @@ const matchCode2Weather = (code) => {
     return 'precipitazioni';
   }
 };
+function toggleHoverState(e){
+  
+  console.log(e,e.target.className.indexOf('hover-reaction'), e.target.className);
+  if(e.type === "mouseleave"){
+    e.target.classList.remove('hover-reaction');
+  }
+  else{
+    if(e.target.classList.contains('card-wrapper')){
+      e.target.classList.add('hover-reaction');
+    }
+  }
+}
 
 const Day = ({dayData, header, city}) => (
   (header ?
@@ -44,41 +56,43 @@ const Day = ({dayData, header, city}) => (
         <Card.Title>
             <IconContext.Provider value={{ color: "white", size: "2em" }}>
               <div>
-                <FaMapMarkerAlt />
-                <span style={{fontSize:"3em", fontWeight: '300'}}>{city}</span>
+                <span style={{fontSize:"3em", fontWeight: '300'}}><FaMapMarkerAlt size={'1em'}/> {city}</span>
               </div>
             </IconContext.Provider>
         </Card.Title>
         <div>
           <div> <div className={matchCode2Weather(dayData.weather.code)+ " icon-tempo big-icon"}></div> </div>
           <h1> {Math.floor(dayData.temp)}°</h1>
-          <div>Percepita: {dayData.app_max_temp}°</div>
+          <div>Percepita: {Math.floor(dayData.app_max_temp)}°</div>
           <div>Umidità: {dayData.rh} %</div>
         </div>
       </Card.Body>
     </Card>
     ):
     (  
-          <Card>
-          <Card.Body>
-            <Card.Title>
-              <div style={{textTransform: 'uppercase'}}>
-                <Moment format="ddd D" locale="it">
-                  {dayData.datetime}
-                </Moment>
+      <div className={"card-wrapper"} onMouseEnter={toggleHoverState} onMouseLeave={toggleHoverState}>
+        <Card >
+            <Card.Body >
+              <Card.Title>
+                <div style={{textTransform: 'uppercase'}}>
+                  <Moment format="ddd D" locale="it">
+                    {dayData.datetime}
+                  </Moment>
+                </div>
+              
+              </Card.Title>
+              <Card.Text>
+              <div>
+                <div> <div className={matchCode2Weather(dayData.weather.code)+ " icon-tempo"}></div> </div>
               </div>
-            
-            </Card.Title>
-            <Card.Text>
-            <div>
-              <div> <div className={matchCode2Weather(dayData.weather.code)+ " icon-tempo"}></div> </div>
-            </div>
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>              
-            <div>{Math.floor(dayData.app_max_temp) + "° - " + Math.floor(dayData.app_min_temp) + "°"}</div>
-          </Card.Footer>
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>              
+              <div>{Math.floor(dayData.app_max_temp) + "° - " + Math.floor(dayData.app_min_temp) + "°"}</div>
+            </Card.Footer>
         </Card>
+      </div>
+          
       )
     )
   )
