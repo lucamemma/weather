@@ -6,16 +6,16 @@ import { Spinner } from 'react-bootstrap';
 function App() {
 
   const [data, setData] = useState(null);
-  let city = 'Rome';
+
   const state = 'Italy';
   const APIKEY = "edad788f999748dd986f2d4b76c75522";
 
   const getCityName = () => {
     let loc = document.location;
-    if(loc.pathname!=''){
-      return loc.pathname.split("/")[1];
+    if(loc.pathname!=='/weather/'){
+      return loc.pathname.split("/")[2];
     }
-    if(loc.search!=''){
+    if(loc.search!==''){
       let par = new URLSearchParams(loc.search);
       return Array.from(par.values())[0];
     }
@@ -24,7 +24,7 @@ function App() {
   };
 
   useEffect(()=> {
-      console.log(document.location);
+    let city = 'Rome';
       const fetchData = async () => {
           let root = "https://api.weatherbit.io/v2.0/forecast/daily";
           let new_city = getCityName();
@@ -36,7 +36,6 @@ function App() {
           .then(res => res.json())
           .then(result => {
             setData(result)
-            console.log('RESULT',result);
           }).catch((err) => {
             console.log('Error occurred!');
           });

@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import { Card, Row, Col, Jumbotron, CardDeck } from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 import Moment from 'react-moment';
 import 'moment/locale/it';
 import { IconContext } from "react-icons";
@@ -36,8 +36,6 @@ const matchCode2Weather = (code) => {
   }
 };
 function toggleHoverState(e){
-  
-  console.log(e,e.target.className.indexOf('hover-reaction'), e.target.className);
   if(e.type === "mouseleave"){
     e.target.classList.remove('hover-reaction');
   }
@@ -81,7 +79,7 @@ const Day = ({dayData, header, city}) => (
                 </div>
               
               </Card.Title>
-              <Card.Text>
+              <Card.Text as={"div"}>
               <div>
                 <div> <div className={matchCode2Weather(dayData.weather.code)+ " icon-tempo"}></div> </div>
               </div>
